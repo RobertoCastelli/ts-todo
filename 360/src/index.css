@@ -1,13 +1,83 @@
+/* GENERAL */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  background-color: #f4f4f4;
+  letter-spacing: 0.07rem;
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex-grow: 1;
+}
+
+/* NAVBAR */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.active {
+  color: cadetblue;
+}
+.nav-ul {
+  display: flex;
+  list-style: none;
+}
+.nav-li a {
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* HOME */
+.home-wrapper {
+  margin-top: 3rem;
+  row-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title img"
+    "body img"
+    "button img";
+}
+.home-title {
+  grid-area: title;
+  font-size: large;
+  font-weight: bold;
+  color: cadetblue;
+}
+.home-img {
+  grid-area: img;
+  justify-self: center;
+  align-self: center;
+}
+.home-body {
+  grid-area: body;
+}
+.home-btn {
+  grid-area: button;
+  place-self: center;
+  width: 100px;
+}
+
+/* FOOTER */
+footer {
+  margin: auto;
+  padding: 1rem 0;
 }
