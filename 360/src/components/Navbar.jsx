@@ -9,13 +9,13 @@ export const Navbar = () => {
       </Link>
       <ul className="nav-ul">
         <li className="nav-li">
-          <NavLink activeClassName="active" to="/about">
-            about us
+          <NavLink activeClassName="active" to="/areariservata">
+            Area Riservata
           </NavLink>
         </li>
         <li className="nav-li">
-          <NavLink activeClassName="active" to="/contacts">
-            contacts
+          <NavLink activeClassName="active" to="/Shop">
+            Shop
           </NavLink>
         </li>
       </ul>
