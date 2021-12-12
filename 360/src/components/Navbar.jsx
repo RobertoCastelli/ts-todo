@@ -4,17 +4,17 @@ import { NavLink, Link } from "react-router-dom"
 export const Navbar = () => {
   return (
     <nav className="nav-wrapper">
-      <Link exact to="/">
+      <Link to="/">
         <img src="https://via.placeholder.com/50" alt="logo" />
       </Link>
       <ul className="nav-ul">
         <li className="nav-li">
-          <NavLink activeClassName="active" to="/areariservata">
+          <NavLink activeclassname="active" to="/areariservata">
             Area Riservata
           </NavLink>
         </li>
         <li className="nav-li">
-          <NavLink activeClassName="active" to="/Shop">
+          <NavLink activeclassname="active" to="/Shop">
             Shop
           </NavLink>
         </li>

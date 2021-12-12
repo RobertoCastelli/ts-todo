@@ -1,12 +1,12 @@
 import React from "react"
 import { About } from "./About"
-import { Virtuality } from "./Virtuality"
+import { Virtual } from "./Virtual"
 
 export const Home = () => {
   return (
     <div>
       <About />
-      <Virtuality />
+      <Virtual />
     </div>
   )
 }

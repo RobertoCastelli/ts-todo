@@ -110,6 +110,28 @@ body {
   color: cadetblue;
 }
 
+/* TOUR BUTTON */
+.tour-wrapper {
+  display: grid;
+}
+.tour-btn {
+  width: 200px;
+  height: 100px;
+  margin: 3rem auto;
+  cursor: pointer;
+  font-weight: bold;
+  color: cadetblue;
+  border: none;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  transition: all 0.1s ease-in;
+  box-shadow: 5px 5px 10px #999999;
+}
+.tour-btn:active {
+  transform: translateY(5px);
+  box-shadow: 1px 1px #999999;
+}
+
 /* FOOTER */
 footer {
   margin: auto;

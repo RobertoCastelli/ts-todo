@@ -1,9 +1,9 @@
 import React from "react"
 
-export const Virtuality = () => {
+export const Virtual = () => {
   return (
     <div className="home-wrapper">
-      <div className="home-title">360 VIRTUALITY</div>
+      <div className="home-title">360 VIRTUALITALY</div>
       <div className="home-body">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam autem
         error dolorum provident natus eaque ducimus tempora doloremque esse
