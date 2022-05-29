@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Todo } from "../Model"
 
 interface Props {
@@ -8,6 +8,10 @@ interface Props {
 }
 
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
+  //--- STATES
+  const [edit, setEdit] = useState<boolean>(false)
+  const [editTodo, setEditTodo] = useState<string>(todo.todo)
+
   //--- DONE TODO
   const handleDone = (index: number) => {
     setTodos(
@@ -22,16 +26,16 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
     setTodos(todos.filter((todo) => todo.id !== index))
   }
 
-  //--- MODIFY TODO
-  const handleModify = (index: number) => {}
-
   return (
     <form className="todos__single">
-      {todo.isDone ? (
+      {edit ? (
+        <input value={editTodo} onChange={(e) => setEditTodo(e.target.value)} />
+      ) : todo.isDone ? (
         <s className="todos__single--text">{todo.todo}</s>
       ) : (
         <div className="todos__single--text">{todo.todo}</div>
       )}
+
       <div className="todos__single--icons">
         <span
           className="todos__single--icon"
@@ -39,9 +43,14 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
         >
           OK
         </span>
+
         <span
           className="todos__single--icon"
-          onClick={() => handleModify(todo.id)}
+          onClick={() => {
+            if (!edit && !todo.isDone) {
+              setEdit(!edit)
+            }
+          }}
         >
           MOD
         </span>
